@@ -1,0 +1,25 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #232946;
+}
+#announcement {
+    color:#eebbc3;
+}
+#navbar-text {
+    color:#eebbc3;
+}
+#footer {
+    color:#eebbc3;
+}
+#heading {
+    color:#fffffe;
+}
+hr {
+    color:#eebbc3;
+}
+#project-title {
+    color:#fffffe;
+}
+#project-description {
+    color:#b8c1ec;
+}

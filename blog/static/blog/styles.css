@@ -1,0 +1,29 @@
+#header {
+    color:#FFFFFF;
+}
+#back-button {
+    color:#fbdd74;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #301e4e;
+}
+#blog-title {
+    color: #ff6e6c;
+}
+#blog-date {
+    color:#FFFFFF;
+}
+#blog-description {
+    color:#c9bae2; 
+}
+hr {
+    background-color:#fbdd74;
+}
+#footer {
+    color: #fbdd74;
+}
+#navbar-text {
+    color: #fbdd74;
+}
+

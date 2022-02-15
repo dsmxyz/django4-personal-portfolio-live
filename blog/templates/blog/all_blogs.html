@@ -1,0 +1,22 @@
+<!--Page displays a list of all blog posts-->
+{% extends 'blog/base.html' %}
+{% block title %}The Void{% endblock %}
+{% block content %}
+</br>
+<div id="header">
+    <h1 class="text-center"><strong>The Void</strong></h1>
+    <h6 class="text-center">A blog that doesn't work</h6>
+</div>
+<!-- Puralize makes the word "blog" plural if blogs.count is 0 or more than -->
+<h2 class="text-center" style="color:#fbdd74;">There are {{ blogs.count }} blog{{ blogs.count|pluralize }} in the void</h2>
+<hr/>
+{% for blog in blogs %}
+<div>
+    <a href="{% url 'blog:detail' blog.id %}" class="text-decoration-none"><h2 id="blog-title"><strong>{{ blog.title }}</strong></h2></a>
+    <h5 id="blog-date">By dsmxyz on {{ blog.date|date:'M d Y' }}</h5>
+    <!-- safe allows html tags | linebreaksbr allows linebreaks when blog post is displayed-->
+    <h4 id="blog-description">{{ blog.description|truncatechars:150|safe|linebreaksbr }}</h4>
+</div>
+<hr/>
+{% endfor %}
+{% endblock %}

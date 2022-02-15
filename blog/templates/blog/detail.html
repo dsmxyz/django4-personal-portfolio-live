@@ -1,0 +1,17 @@
+<!-- Individual blog page -->
+{% extends 'blog/base.html' %}
+{% block title %}{{ blog.title }}{% endblock %}
+{% block content %}
+</br>
+<!-- "blog:" references blog app -->
+<a href="{% url 'blog:all_blogs' %}" class="text-decoration-none" id="back-button"><h6>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+      </svg>
+      Back to The Void</h6></a>
+<h1 id="blog-title">{{ blog.title }}</h1>
+<h5 id="blog-date">{{ blog.date|date:'F jS Y' }}</h5>
+<hr/>
+<!-- safe allows html tags | linebreaksbr allows linebreaks when blog post is displayed-->
+<p id="blog-description">{{ blog.description|safe|linebreaksbr }}</p>
+{% endblock %}
