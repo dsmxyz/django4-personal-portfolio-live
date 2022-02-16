@@ -13,5 +13,5 @@
 <h5 id="blog-date">{{ blog.date|date:'F jS Y' }}</h5>
 <hr/>
 <!-- safe allows html tags | linebreaksbr allows linebreaks when blog post is displayed-->
-<p id="blog-description">{{ blog.description|safe|linebreaksbr }}</p>
+<body id="blog-description">{{ blog.description|safe|linebreaksbr }}</body>
 {% endblock %}
